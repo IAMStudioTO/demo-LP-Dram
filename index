@@ -28,6 +28,7 @@
   <!-- 🔴 CAMBIA QUI: incolla la URL della tua scena Spline -->
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.6/build/spline-viewer.js"></script>
 <spline-viewer url="undefined"></spline-viewer>
+
   <!-- Script anti-badge -->
   <script>
     window.addEventListener("DOMContentLoaded", () => {
