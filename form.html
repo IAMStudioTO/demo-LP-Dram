@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Form Box 24 Dream Night</title>
+
+  <!-- Spline Viewer -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.6/build/spline-viewer.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* SFONDO SPLINE */
+    #spline-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* FORM (DESKTOP) */
+    #form-container {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      width: 100%;
+      max-width: 600px;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 0;
+    }
+
+    /* ----- MOBILE: FORM PERFETTAMENTE CENTRATO ----- */
+    @media (max-width: 768px) {
+      #form-container {
+        top: 50%;               /* centro verticale */
+        left: 50%;
+        transform: translate(-50%, -50%); /* centro esatto */
+      }
+
+      iframe {
+        height: 600px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SFONDO SPLINE -->
+  <div id="spline-bg">
+    <spline-viewer url="https://prod.spline.design/v1Tu-caY4CUrZmPP/scene.splinecode"></spline-viewer>
+  </div>
+
+  <!-- FORM TALLY -->
+  <div id="form-container">
+    <iframe
+      data-tally-src="https://tally.so/r/ODa8OA?transparentBackground=1"
+      title="Form Box 24 Dream Night"
+    ></iframe>
+  </div>
+
+  <!-- Tally Embed -->
+  <script async src="https://tally.so/widgets/embed.js"></script>
+
+</body>
+</html>
+
