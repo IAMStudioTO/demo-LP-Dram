@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Form Box 24 Dream Night</title>
+
+  <!-- Spline Viewer -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.6/build/spline-viewer.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* SFONDO SPLINE */
+    #spline-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* FORM (DESKTOP) */
+    #form-container {
+      position: absolute;
+      top: 55%; /* posizione originale */
+      left: 50%;
+      transform: translate(-50%, -40%);
+      width: 100%;
+      max-width: 600px;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 0;
+    }
+
+    /* MOBILE FIX */
+    @media (max-width: 768px) {
+      #form-container {
+        top: auto;              /* disattivo top */
+        bottom: 5%;             /* rimane fermo in basso */
+        transform: translateX(-50%); /* niente movimento verticale */
+      }
+
+      iframe {
+        height: 600px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SFONDO SPLINE -->
+  <div id="spline-bg">
+    <spline-viewer url="https://prod.spline.design/v1Tu-caY4CUrZmPP/scene.splinecode"></spline-viewer>
+  </div>
+
+  <!-- FORM TALLY -->
+  <div id="form-container">
+    <iframe
+      data-tally-src="https://tally.so/r/ODa8OA?transparentBackground=1"
+      title="Form Box 24 Dream Night"
+    ></iframe>
+  </div>
+
+  <!-- Tally Embed -->
+  <script async src="https://tally.so/widgets/embed.js"></script>
+
+  <!-- FIX: evita spostamenti quando appare la tastiera mobile -->
+  <script>
+    const fixViewportHeight = () => {
+      document.body.style.height = window.innerHeight + "px";
+    };
+
+    window.addEventListener("resize", fixViewportHeight);
+    fixViewportHeight();
+  </script>
+
+</body>
+</html>
+
